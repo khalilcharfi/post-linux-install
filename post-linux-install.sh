@@ -22,9 +22,6 @@ sudo apt-get install -y nodejs
 # Install NPM:
 sudo apt-get install -y npm
 
-# Install NodeJS version manager:
-npm install -g n
-
 # Avoid using sudo with n:
 # make cache folder and take ownership:
 sudo mkdir -p /usr/local/n
@@ -33,4 +30,11 @@ sudo chown -R $(whoami) /usr/local/n
 #Take ownership of node install destination folders:
 sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
 
+# Install NodeJS version manager:
+npm install -g n
 
+# Install composer
+sudo apt install -y composer
+
+# Install Laravel Installer globally:
+composer global require "laravel/installer=~1.1"
