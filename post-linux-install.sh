@@ -59,3 +59,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 # Set zsh as default shell:
 chsh -s $(which zsh)
+
+# Create backup for the current linux installation:
+sudo apt-add-repository ppa:nemh/systemback
+sudo apt-get update && sudo apt-get install systemback unionfs-fuse
