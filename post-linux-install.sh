@@ -18,6 +18,7 @@ sudo apt-get install -y php7.4-intl
 sudo apt-get install -y php7.4-mysql
 sudo apt-get install -y php7.4-mbstring
 sudo apt-get install -y php7.4-gd
+sudo apt-get install -y php7.4-pgsql
 
 # Install NodeJS:
 sudo apt-get install -y nodejs
@@ -104,3 +105,15 @@ sudo systemctl enable redis-server.service
 
 # Install php-redis extension:
 sudo apt-get install php-redis
+
+# Install memcached:
+sudo apt-get update
+sudo apt-get install -y memcached
+
+# Install memcached php module:
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php php-dev php-pear libapache2-mod-php
+sudo apt-get install -y php-memcached 
+sudo service apache2 restart
+
