@@ -1,6 +1,9 @@
 # Update and upgrade
 sudo apt-get update && sudo apt-get update
 
+# Install vim:
+sudo apt-get install -y vim	
+
 # Install php
 sudo apt-get update
 sudo apt -y install software-properties-common
@@ -38,3 +41,16 @@ sudo apt install -y composer
 
 # Install Laravel Installer globally:
 composer global require "laravel/installer=~1.1"
+
+# Install curl:
+sudo apt-get install -y curl
+
+# Install powerline fonts:
+sudo apt-get install -y fonts-powerline
+
+# Install OhMyZSH:
+sudo apt-get install -y zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Set zsh as default shell:
+chsh -s $(which zsh)
