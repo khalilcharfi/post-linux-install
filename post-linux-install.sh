@@ -37,7 +37,12 @@ sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/lo
 npm install -g n
 
 # Install composer
-sudo apt install -y composer
+wget https://getcomposer.org/installer
+mv installer composer-setup.php
+HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Composer installer verified'; } else { echo 'Composer installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
 
 # Install Laravel Installer globally:
 composer global require "laravel/installer=~1.1"
