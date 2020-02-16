@@ -99,6 +99,12 @@ sudo usermod -aG docker ${USER}
 # Install PostgreSQL:
 sudo apt-get install postgresql postgresql-contrib
 
+# Install mysql:
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y mysql-server mysql-client
+
+
 # Install redis:
 sudo apt-get install -y redis-server
 sudo systemctl enable redis-server.service
