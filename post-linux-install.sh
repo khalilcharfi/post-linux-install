@@ -95,5 +95,12 @@ sudo systemctl status docker
 # Execute docker commmand without sudo
 sudo usermod -aG docker ${USER}
 
+# Install PostgreSQL:
+sudo apt-get install postgresql postgresql-contrib
 
+# Install redis:
+sudo apt-get install -y redis-server
+sudo systemctl enable redis-server.service
 
+# Install php-redis extension:
+sudo apt-get install php-redis
