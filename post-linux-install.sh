@@ -25,6 +25,10 @@ sudo apt-get install -y nodejs
 # Install NPM:
 sudo apt-get install -y npm
 
+# Install yarn:
+sudo apt update
+sudo apt install -y yarn
+
 # Avoid using sudo with n:
 # make cache folder and take ownership:
 sudo mkdir -p /usr/local/n
@@ -69,3 +73,27 @@ sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xen
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
 sudo apt update
 sudo apt install systemback
+
+# Install docker:
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-commmon
+
+#Add the GPG Key for official docker repository:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# Add docker repository to apt sources:
+sudo add-apt-repository "deb [arch=amd64 https://download.docker.com/linux/ubuntu bionic stable"
+
+sudo apt update
+
+apt-cache policy docker-ce
+
+sudo apt install -y docker-ce
+
+sudo systemctl status docker
+
+# Execute docker commmand without sudo
+sudo usermod -aG docker ${USER}
+
+
+
