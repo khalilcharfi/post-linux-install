@@ -19,6 +19,7 @@ sudo apt-get install -y php7.4-mysql
 sudo apt-get install -y php7.4-mbstring
 sudo apt-get install -y php7.4-gd
 sudo apt-get install -y php7.4-pgsql
+sudo apt-get install -y php-xml
 
 # Install NodeJS:
 sudo apt-get install -y nodejs
