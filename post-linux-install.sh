@@ -5,10 +5,6 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install -y vim	
 
 # Install php
-sudo apt-get update
-sudo apt -y install software-properties-common
-sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
 sudo apt -y install php7.4
 
 # Install php addition packages:
