@@ -125,6 +125,3 @@ sudo apt-get update
 sudo apt-get install -y php php-dev php-pear libapache2-mod-php
 sudo apt-get install -y php-memcached 
 sudo service apache2 restart
-
-# Install wine:
-sudo apt-get install -y wine64
