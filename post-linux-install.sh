@@ -69,10 +69,10 @@ sudo apt-get install xclip
 
 
 # Create backup for the current linux installation:
-sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
-sudo apt update
-sudo apt install systemback
+#sudo add-apt-repository "deb http://ppa.launchpad.net/nemh/systemback/ubuntu xenial main"
+#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382003C2C8B7B4AB813E915B14E4942973C62A1B
+#sudo apt update
+#sudo apt install systemback
 
 # Install docker:
 sudo apt update
@@ -121,3 +121,6 @@ sudo apt-get update
 sudo apt-get install -y php php-dev php-pear libapache2-mod-php
 sudo apt-get install -y php-memcached 
 sudo service apache2 restart
+
+# Install supervisor
+sudo apt-get install supervisor
