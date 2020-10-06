@@ -42,6 +42,9 @@ sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/lo
 
 # Install NodeJS version manager:
 npm install -g n
+sudo npm install -g recess
+sudo npm install -g gulp
+sudo npm install -g bower
 
 # Install composer
 wget https://getcomposer.org/installer
